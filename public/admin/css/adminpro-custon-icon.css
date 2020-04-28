@@ -1,0 +1,913 @@
+@font-face {
+  font-family: 'adminpro-icon';
+  src:
+    url('fonts/adminpro-icon.ttf?4gzvyg') format('truetype'),
+    url('fonts/adminpro-icon.woff?4gzvyg') format('woff'),
+    url('fonts/adminpro-icon.svg?4gzvyg#adminpro-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.adminpro-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'adminpro-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.adminpro-add-circular-outlined-button:before {
+  content: "\e900";
+}
+.adminpro-adobe-illustrator-cc:before {
+  content: "\e901";
+}
+.adminpro-airplay:before {
+  content: "\e902";
+}
+.adminpro-ak-47:before {
+  content: "\e903";
+}
+.adminpro-alarm-clock:before {
+  content: "\e904";
+}
+.adminpro-align-justify:before {
+  content: "\e905";
+}
+.adminpro-align-to-left:before {
+  content: "\e906";
+}
+.adminpro-align-to-right:before {
+  content: "\e907";
+}
+.adminpro-analytics:before {
+  content: "\e908";
+}
+.adminpro-analytics-arrow:before {
+  content: "\e909";
+}
+.adminpro-analytics-bridge:before {
+  content: "\e90a";
+}
+.adminpro-analytics-graph:before {
+  content: "\e90b";
+}
+.adminpro-analytics-rounded:before {
+  content: "\e90c";
+}
+.adminpro-analytics-rounded-arrow:before {
+  content: "\e90d";
+}
+.adminpro-anchor:before {
+  content: "\e90e";
+}
+.adminpro-android:before {
+  content: "\e90f";
+}
+.adminpro-ask:before {
+  content: "\e910";
+}
+.adminpro-automatic-gun:before {
+  content: "\e911";
+}
+.adminpro-avatar:before {
+  content: "\e912";
+}
+.adminpro-back:before {
+  content: "\e913";
+}
+.adminpro-back-restart:before {
+  content: "\e914";
+}
+.adminpro-bag:before {
+  content: "\e915";
+}
+.adminpro-bar-chart:before {
+  content: "\e916";
+}
+.adminpro-bar-chart-thr:before {
+  content: "\e917";
+}
+.adminpro-bar-chart-up-arrow:before {
+  content: "\e918";
+}
+.adminpro-bathtub:before {
+  content: "\e919";
+}
+.adminpro-big-square-target:before {
+  content: "\e91a";
+}
+.adminpro-bike:before {
+  content: "\e91b";
+}
+.adminpro-bird:before {
+  content: "\e91c";
+}
+.adminpro-bluetooth:before {
+  content: "\e91d";
+}
+.adminpro-bold-text-option:before {
+  content: "\e91e";
+}
+.adminpro-bra:before {
+  content: "\e91f";
+}
+.adminpro-brace:before {
+  content: "\e920";
+}
+.adminpro-bracelet:before {
+  content: "\e921";
+}
+.adminpro-brassiere:before {
+  content: "\e922";
+}
+.adminpro-brazil-real-symbol:before {
+  content: "\e923";
+}
+.adminpro-calculator:before {
+  content: "\e924";
+}
+.adminpro-calendar:before {
+  content: "\e925";
+}
+.adminpro-calendar-with-spring-binder-and-date-blocks:before {
+  content: "\e926";
+}
+.adminpro-calipers:before {
+  content: "\e927";
+}
+.adminpro-car:before {
+  content: "\e928";
+}
+.adminpro-caret-down:before {
+  content: "\e929";
+}
+.adminpro-caret-left:before {
+  content: "\e92a";
+}
+.adminpro-caret-right:before {
+  content: "\e92b";
+}
+.adminpro-caret-up:before {
+  content: "\e92c";
+}
+.adminpro-cart:before {
+  content: "\e92d";
+}
+.adminpro-center-text-alignment:before {
+  content: "\e92e";
+}
+.adminpro-chat:before {
+  content: "\e92f";
+}
+.adminpro-chat-pro:before {
+  content: "\e930";
+}
+.adminpro-check-correct:before {
+  content: "\e931";
+}
+.adminpro-checked:before {
+  content: "\e932";
+}
+.adminpro-checked-admin:before {
+  content: "\e933";
+}
+.adminpro-checked-pro:before {
+  content: "\e934";
+}
+.adminpro-check-icon:before {
+  content: "\e935";
+}
+.adminpro-check-quality:before {
+  content: "\e936";
+}
+.adminpro-check-square:before {
+  content: "\e937";
+}
+.adminpro-check-success:before {
+  content: "\e938";
+}
+.adminpro-circular-saw:before {
+  content: "\e939";
+}
+.adminpro-clamp:before {
+  content: "\e93a";
+}
+.adminpro-cloud-computing-danger:before {
+  content: "\e93b";
+}
+.adminpro-cloud-computing-down:before {
+  content: "\e93c";
+}
+.adminpro-cloud-computing-reload:before {
+  content: "\e93d";
+}
+.adminpro-cloud-computing-up:before {
+  content: "\e93e";
+}
+.adminpro-code:before {
+  content: "\e93f";
+}
+.adminpro-coin:before {
+  content: "\e940";
+}
+.adminpro-commenting:before {
+  content: "\e941";
+}
+.adminpro-compress:before {
+  content: "\e942";
+}
+.adminpro-computer-tower:before {
+  content: "\e943";
+}
+.adminpro-construction-excavator:before {
+  content: "\e944";
+}
+.adminpro-controls:before {
+  content: "\e945";
+}
+.adminpro-costa-rica-colon-currency-symbol:before {
+  content: "\e946";
+}
+.adminpro-crop-tool:before {
+  content: "\e947";
+}
+.adminpro-cross-out:before {
+  content: "\e948";
+}
+.adminpro-cuba-peso-currency-symbol:before {
+  content: "\e949";
+}
+.adminpro-dahlia:before {
+  content: "\e94a";
+}
+.adminpro-daisy:before {
+  content: "\e94b";
+}
+.adminpro-danger-error:before {
+  content: "\e94c";
+}
+.adminpro-desktop-monitor:before {
+  content: "\e94d";
+}
+.adminpro-dog:before {
+  content: "\e94e";
+}
+.adminpro-dollar-symbol:before {
+  content: "\e94f";
+}
+.adminpro-double-arrow-diagonal-in-a-circle:before {
+  content: "\e950";
+}
+.adminpro-down-arrow:before {
+  content: "\e951";
+}
+.adminpro-down-arrow-in-a-circle:before {
+  content: "\e952";
+}
+.adminpro-download:before {
+  content: "\e953";
+}
+.adminpro-download-arrow:before {
+  content: "\e954";
+}
+.adminpro-dress:before {
+  content: "\e955";
+}
+.adminpro-drill:before {
+  content: "\e956";
+}
+.adminpro-earrings:before {
+  content: "\e957";
+}
+.adminpro-edit:before {
+  content: "\e958";
+}
+.adminpro-edit-line:before {
+  content: "\e959";
+}
+.adminpro-electric-guitar:before {
+  content: "\e95a";
+}
+.adminpro-email:before {
+  content: "\e95b";
+}
+.adminpro-envelope:before {
+  content: "\e95c";
+}
+.adminpro-euro-currency-symbol:before {
+  content: "\e95d";
+}
+.adminpro-euro-symbol:before {
+  content: "\e95e";
+}
+.adminpro-excellence:before {
+  content: "\e95f";
+}
+.adminpro-expand:before {
+  content: "\e960";
+}
+.adminpro-facebook:before {
+  content: "\e961";
+}
+.adminpro-favourite-circular-button:before {
+  content: "\e962";
+}
+.adminpro-fax:before {
+  content: "\e963";
+}
+.adminpro-female .path1:before {
+  content: "\e964";
+  color: rgb(48, 60, 66);
+}
+.adminpro-female .path2:before {
+  content: "\e965";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.adminpro-firefox:before {
+  content: "\e966";
+}
+.adminpro-flash-symbol:before {
+  content: "\e967";
+}
+.adminpro-font-symbol-of-letter-a:before {
+  content: "\e968";
+}
+.adminpro-fretsaw:before {
+  content: "\e969";
+}
+.adminpro-garbage:before {
+  content: "\e96a";
+}
+.adminpro-golf:before {
+  content: "\e96b";
+}
+.adminpro-google-map:before {
+  content: "\e96c";
+}
+.adminpro-google-plus:before {
+  content: "\e96d";
+}
+.adminpro-graduation:before {
+  content: "\e96e";
+}
+.adminpro-graduation-school-hat:before {
+  content: "\e96f";
+}
+.adminpro-graph-down:before {
+  content: "\e970";
+}
+.adminpro-graph-round:before {
+  content: "\e971";
+}
+.adminpro-graph-up-arrow:before {
+  content: "\e972";
+}
+.adminpro-hamburger:before {
+  content: "\e973";
+}
+.adminpro-happy:before {
+  content: "\e974";
+}
+.adminpro-headphones:before {
+  content: "\e975";
+}
+.adminpro-heart-love:before {
+  content: "\e976";
+}
+.adminpro-heart-rounded:before {
+  content: "\e977";
+}
+.adminpro-hide:before {
+  content: "\e978";
+}
+.adminpro-high-heels:before {
+  content: "\e979";
+}
+.adminpro-home:before {
+  content: "\e97a";
+}
+.adminpro-home-admin:before {
+  content: "\e97b";
+}
+.adminpro-honduras-lempira-currency-symbol:before {
+  content: "\e97c";
+}
+.adminpro-hypericum:before {
+  content: "\e97d";
+}
+.adminpro-inbox:before {
+  content: "\e97e";
+}
+.adminpro-india-rupee-currency-symbol:before {
+  content: "\e97f";
+}
+.adminpro-indonesia-rupiah-currency-symbol:before {
+  content: "\e980";
+}
+.adminpro-info:before {
+  content: "\e981";
+}
+.adminpro-infor:before {
+  content: "\e982";
+}
+.adminpro-inform:before {
+  content: "\e983";
+}
+.adminpro-informat:before {
+  content: "\e984";
+}
+.adminpro-informati:before {
+  content: "\e985";
+}
+.adminpro-informatio:before {
+  content: "\e986";
+}
+.adminpro-informations-admin:before {
+  content: "\e987";
+}
+.adminpro-instagram:before {
+  content: "\e988";
+}
+.adminpro-israel-shekel-currency-symbol:before {
+  content: "\e989";
+}
+.adminpro-italicize-text:before {
+  content: "\e98a";
+}
+.adminpro-jasmine:before {
+  content: "\e98b";
+}
+.adminpro-jeans:before {
+  content: "\e98c";
+}
+.adminpro-jonquil:before {
+  content: "\e98d";
+}
+.adminpro-ladder:before {
+  content: "\e98e";
+}
+.adminpro-left-arrow:before {
+  content: "\e98f";
+}
+.adminpro-lens-hood:before {
+  content: "\e990";
+}
+.adminpro-like:before {
+  content: "\e991";
+}
+.adminpro-line-chart:before {
+  content: "\e992";
+}
+.adminpro-line-chart-round-up:before {
+  content: "\e993";
+}
+.adminpro-line-chart-stamp:before {
+  content: "\e994";
+}
+.adminpro-linkedin:before {
+  content: "\e995";
+}
+.adminpro-little-table-grid:before {
+  content: "\e996";
+}
+.adminpro-locked:before {
+  content: "\e997";
+}
+.adminpro-mail:before {
+  content: "\e998";
+}
+.adminpro-male .path1:before {
+  content: "\e999";
+  color: rgb(48, 60, 66);
+}
+.adminpro-male .path2:before {
+  content: "\e99a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.adminpro-male-female:before {
+  content: "\e99b";
+}
+.adminpro-map:before {
+  content: "\e99c";
+}
+.adminpro-menu:before {
+  content: "\e99d";
+}
+.adminpro-message:before {
+  content: "\e99e";
+}
+.adminpro-metacafe:before {
+  content: "\e99f";
+}
+.adminpro-microphone:before {
+  content: "\e9a0";
+}
+.adminpro-minus-sign-in-a-circle:before {
+  content: "\e9a1";
+}
+.adminpro-mode-circular-button:before {
+  content: "\e9a2";
+}
+.adminpro-money:before {
+  content: "\e9a3";
+}
+.adminpro-money-bills:before {
+  content: "\e9a4";
+}
+.adminpro-mongolia-tughrik-currency-symbol:before {
+  content: "\e9a5";
+}
+.adminpro-mortarboard:before {
+  content: "\e9a6";
+}
+.adminpro-nail:before {
+  content: "\e9a7";
+}
+.adminpro-nail-puller:before {
+  content: "\e9a8";
+}
+.adminpro-nigeria-naira-currency-symbol:before {
+  content: "\e9a9";
+}
+.adminpro-north-korea-won:before {
+  content: "\e9aa";
+}
+.adminpro-oleander:before {
+  content: "\e9ab";
+}
+.adminpro-open-book:before {
+  content: "\e9ac";
+}
+.adminpro-opened-email-envelope:before {
+  content: "\e9ad";
+}
+.adminpro-open-magazine:before {
+  content: "\e9ae";
+}
+.adminpro-paint-brush:before {
+  content: "\e9af";
+}
+.adminpro-paint-roller:before {
+  content: "\e9b0";
+}
+.adminpro-pamela:before {
+  content: "\e9b1";
+}
+.adminpro-panties:before {
+  content: "\e9b2";
+}
+.adminpro-paperclip-document-outline:before {
+  content: "\e9b3";
+}
+.adminpro-paragraph-text-interface-sign:before {
+  content: "\e9b4";
+}
+.adminpro-paypal:before {
+  content: "\e9b5";
+}
+.adminpro-pear:before {
+  content: "\e9b6";
+}
+.adminpro-pencil:before {
+  content: "\e9b7";
+}
+.adminpro-peru-nuevo-sol-currency-symbol:before {
+  content: "\e9b8";
+}
+.adminpro-philippines-peso-currency-symbol:before {
+  content: "\e9b9";
+}
+.adminpro-phone-call:before {
+  content: "\e9ba";
+}
+.adminpro-photo-camera:before {
+  content: "\e9bb";
+}
+.adminpro-pie-chart:before {
+  content: "\e9bc";
+}
+.adminpro-pinterest:before {
+  content: "\e9bd";
+}
+.adminpro-placeholder:before {
+  content: "\e9be";
+}
+.adminpro-play-button:before {
+  content: "\e9bf";
+}
+.adminpro-play-rounded:before {
+  content: "\e9c0";
+}
+.adminpro-pliers:before {
+  content: "\e9c1";
+}
+.adminpro-plus-add-button:before {
+  content: "\e9c2";
+}
+.adminpro-plus-add-button-in:before {
+  content: "\e9c3";
+}
+.adminpro-plus-symbol:before {
+  content: "\e9c4";
+}
+.adminpro-poland-zloty-currency-symbol:before {
+  content: "\e9c5";
+}
+.adminpro-poppy:before {
+  content: "\e9c6";
+}
+.adminpro-pound-symbol-variant:before {
+  content: "\e9c7";
+}
+.adminpro-previous:before {
+  content: "\e9c8";
+}
+.adminpro-printer:before {
+  content: "\e9c9";
+}
+.adminpro-question:before {
+  content: "\e9ca";
+}
+.adminpro-refresh-button:before {
+  content: "\e9cb";
+}
+.adminpro-reload:before {
+  content: "\e9cc";
+}
+.adminpro-right-arrow:before {
+  content: "\e9cd";
+}
+.adminpro-right-arrow-angle:before {
+  content: "\e9ce";
+}
+.adminpro-rocket-launch:before {
+  content: "\e9cf";
+}
+.adminpro-rose:before {
+  content: "\e9d0";
+}
+.adminpro-roulette:before {
+  content: "\e9d1";
+}
+.adminpro-rounded-info-button:before {
+  content: "\e9d2";
+}
+.adminpro-round-help-button:before {
+  content: "\e9d3";
+}
+.adminpro-round-info-button:before {
+  content: "\e9d4";
+}
+.adminpro-rss:before {
+  content: "\e9d5";
+}
+.adminpro-ruler:before {
+  content: "\e9d6";
+}
+.adminpro-rupee-indian:before {
+  content: "\e9d7";
+}
+.adminpro-russia-ruble-currency-symbol:before {
+  content: "\e9d8";
+}
+.adminpro-saudi-arabia-riyal-currency-symbol:before {
+  content: "\e9d9";
+}
+.adminpro-saw:before {
+  content: "\e9da";
+}
+.adminpro-screen:before {
+  content: "\e9db";
+}
+.adminpro-screwdriver:before {
+  content: "\e9dc";
+}
+.adminpro-search:before {
+  content: "\e9dd";
+}
+.adminpro-search-circular-button:before {
+  content: "\e9de";
+}
+.adminpro-set-square:before {
+  content: "\e9df";
+}
+.adminpro-settings:before {
+  content: "\e9e0";
+}
+.adminpro-settings-rounded:before {
+  content: "\e9e1";
+}
+.adminpro-settings-up:before {
+  content: "\e9e2";
+}
+.adminpro-share:before {
+  content: "\e9e3";
+}
+.adminpro-shield:before {
+  content: "\e9e4";
+}
+.adminpro-shirt:before {
+  content: "\e9e5";
+}
+.adminpro-shoe:before {
+  content: "\e9e6";
+}
+.adminpro-shoe-pro:before {
+  content: "\e9e7";
+}
+.adminpro-shopping-cart:before {
+  content: "\e9e8";
+}
+.adminpro-shower:before {
+  content: "\e9e9";
+}
+.adminpro-sitemap:before {
+  content: "\e9ea";
+}
+.adminpro-skyline:before {
+  content: "\e9eb";
+}
+.adminpro-skype:before {
+  content: "\e9ec";
+}
+.adminpro-small-calendar:before {
+  content: "\e9ed";
+}
+.adminpro-smartphone-call:before {
+  content: "\e9ee";
+}
+.adminpro-smiling-emoticon-square-face:before {
+  content: "\e9ef";
+}
+.adminpro-soundcloud:before {
+  content: "\e9f0";
+}
+.adminpro-sound-frecuency:before {
+  content: "\e9f1";
+}
+.adminpro-south-korea-won-currency-symbol:before {
+  content: "\e9f2";
+}
+.adminpro-speaker:before {
+  content: "\e9f3";
+}
+.adminpro-speaker-rounded:before {
+  content: "\e9f4";
+}
+.adminpro-star:before {
+  content: "\e9f5";
+}
+.adminpro-star-half-empty:before {
+  content: "\e9f6";
+}
+.adminpro-startup:before {
+  content: "\e9f7";
+}
+.adminpro-statistics:before {
+  content: "\e9f8";
+}
+.adminpro-stats:before {
+  content: "\e9f9";
+}
+.adminpro-statue-of-liberty:before {
+  content: "\e9fa";
+}
+.adminpro-strong:before {
+  content: "\e9fb";
+}
+.adminpro-substract:before {
+  content: "\e9fc";
+}
+.adminpro-sunflower:before {
+  content: "\e9fd";
+}
+.adminpro-sunglasses:before {
+  content: "\e9fe";
+}
+.adminpro-switch:before {
+  content: "\e9ff";
+}
+.adminpro-switch-rounded:before {
+  content: "\ea00";
+}
+.adminpro-tags:before {
+  content: "\ea01";
+}
+.adminpro-taiwan-new-dollar-symbol:before {
+  content: "\ea02";
+}
+.adminpro-telly:before {
+  content: "\ea03";
+}
+.adminpro-text-width:before {
+  content: "\ea04";
+}
+.adminpro-thailand-baht:before {
+  content: "\ea05";
+}
+.adminpro-ticket:before {
+  content: "\ea06";
+}
+.adminpro-trash:before {
+  content: "\ea07";
+}
+.adminpro-tumblr:before {
+  content: "\ea08";
+}
+.adminpro-turkey-lira-currency-symbol:before {
+  content: "\ea09";
+}
+.adminpro-twitter:before {
+  content: "\ea0a";
+}
+.adminpro-ukraine-hryvna:before {
+  content: "\ea0b";
+}
+.adminpro-underline-text-option:before {
+  content: "\ea0c";
+}
+.adminpro-university:before {
+  content: "\ea0d";
+}
+.adminpro-up-arrow:before {
+  content: "\ea0e";
+}
+.adminpro-uruguay-peso-currency-symbol:before {
+  content: "\ea0f";
+}
+.adminpro-user-rounded:before {
+  content: "\ea10";
+}
+.adminpro-users:before {
+  content: "\ea11";
+}
+.adminpro-video:before {
+  content: "\ea12";
+}
+.adminpro-video-camera:before {
+  content: "\ea13";
+}
+.adminpro-view:before {
+  content: "\ea14";
+}
+.adminpro-vimeo:before {
+  content: "\ea15";
+}
+.adminpro-voice-recording:before {
+  content: "\ea16";
+}
+.adminpro-warning:before {
+  content: "\ea17";
+}
+.adminpro-warning-cloud-computing:before {
+  content: "\ea18";
+}
+.adminpro-warning-danger:before {
+  content: "\ea19";
+}
+.adminpro-warning-danger-pro:before {
+  content: "\ea1a";
+}
+.adminpro-windows:before {
+  content: "\ea1b";
+}
+.adminpro-worldwide:before {
+  content: "\ea1c";
+}
+.adminpro-world-wide-web:before {
+  content: "\ea1d";
+}
+.adminpro-wrench:before {
+  content: "\ea1e";
+}
+.adminpro-x2-symbol-of-a-letter-and-a-number-subscript:before {
+  content: "\ea1f";
+}
+.adminpro-xbox:before {
+  content: "\ea20";
+}
+.adminpro-xing:before {
+  content: "\ea21";
+}
+.adminpro-yahoo:before {
+  content: "\ea22";
+}
+.adminpro-yen-currency-symbol:before {
+  content: "\ea23";
+}
+.adminpro-yen-symbol:before {
+  content: "\ea24";
+}
+.adminpro-zoom-magnifier-with-minus-sign:before {
+  content: "\ea25";
+}

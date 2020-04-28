@@ -1,0 +1,70 @@
+/*----------------------------------------*/
+/*  1.  Tab Menus CSS
+/*----------------------------------------*/
+.nav-tabs.custom-menu-wrap li a{
+	color:#fff;
+}
+.nav-tabs.custom-menu-wrap li.active a{
+	color:#303030;
+}
+.nav-tabs.custom-menu-wrap li a, .nav-tabs.custom-menu-wrap li.active a{
+	border:1px solid transparent;
+	padding:15px 25px;
+	font-size:15px;
+}
+.nav-tabs.custom-menu-wrap li a:hover{
+	background:#303030;
+	color:#fff;
+}
+.custom-menu-content ul.main-menu-dropdown{
+	position:relative;
+	z-index:99;
+}
+.custom-menu-content ul.main-menu-dropdown li{
+	display:inline-block;
+}
+.custom-menu-content ul.main-menu-dropdown li a{
+	padding:20px 20px;
+	display:block;
+	color:#303030;
+	font-size:14px;
+}
+.custom-menu-content ul.main-menu-dropdown li a:hover{
+	color:#353535;
+}
+.tab-custon-menu-bg{
+	position:relative;
+}
+.tab-custon-menu-bg:before{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	background:#fff;
+	content:"";
+	z-index:9;
+	height:100%;
+}
+.tab-custon-menu-bg-style:before{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	background:#03a9f4;
+	content:"";
+	z-index:9;
+	height:100%;
+}
+.menu-list-wrap .nav-tabs>li.active>a, .menu-list-wrap .nav-tabs>li.active>a:focus, .menu-list-wrap .nav-tabs>li.active>a:hover{
+	background:#03a9f4;
+}
+.menu-list-wrap {
+    background: #fff;
+    padding: 20px;
+}
+.nav-tabs.custom-menu-wrap-st li a{
+	color:#303030;
+}
+.tab-custon-menu-bg-style ul.main-menu-dropdown li a:hover{
+	color:#fff;
+}

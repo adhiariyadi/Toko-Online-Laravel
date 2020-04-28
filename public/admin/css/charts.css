@@ -1,0 +1,18 @@
+.charts-single-pro{
+	background:#fff;
+	padding:20px;
+}
+.chart-bar-button{
+	margin-top:20px;
+}
+.chart-bar-button .randomizeDatacus {
+    background: #303030;
+    color: #fff;
+    border: none;
+    padding: 5px 9px;
+	transition:all .4s ease 0s;
+}
+.chart-bar-button .randomizeDatacus:hover {
+    background: #03a9f4;
+	transition:all .4s ease 0s;
+}
