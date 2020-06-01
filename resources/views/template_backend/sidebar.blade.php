@@ -24,10 +24,8 @@
         <li class="nav-item">
           <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-shopping-bag"></i> <span class="mini-dn">Order</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
           <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-            <a href="{{ route('order.index') }}" class="dropdown-item">List Order Belum Dibayar</a>
-            <a href="{{ route('order.tampil_pending') }}" class="dropdown-item">List Order Dipending</a>
-            <a href="{{ route('order.tampil_bayar') }}" class="dropdown-item">List Order Sudah Dibayar</a>
-            <a href="{{ route('order.tampil_cancel') }}" class="dropdown-item">List Order Dicancel</a>
+            <a href="{{ route('order.index') }}" class="dropdown-item">List Order</a>
+            <a href="{{ route('order.tampil_cancel') }}" class="dropdown-item">List Batal Order</a>
           </div>
         </li>
         <li class="nav-item">

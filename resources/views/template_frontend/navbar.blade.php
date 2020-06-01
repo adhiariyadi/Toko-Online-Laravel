@@ -35,28 +35,15 @@
       <!-- menu -->
       <ul class="main-menu">
         <li><a href="/">Home</a></li>
-        <li><a href="{{ route('mobil.tambah') }}">Jual Mobil</a>
-        <li><a href="{{ route('pembayaran', Auth::user()->id) }}">Belanja</a>
-        @if (Auth::user()->role == 'admin')
-          <li><a href="#">Order</a>
-            <ul class="sub-menu">
-              <li><a href="{{ route('order.index') }}">List Order Belum Dibayar</a></li>
-              <li><a href="{{ route('order.tampil_pending') }}">List Order Dipending</a></li>
-              <li><a href="{{ route('order.tampil_bayar') }}">List Order Sudah Dibayar</a></li>
-              <li><a href="{{ route('order.tampil_cancel') }}">List Order Dicancel</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Mobil</a>
-            <ul class="sub-menu">
-              <li><a href="{{ route('mobil.index') }}">List Mobil</a></li>
-              <li><a href="{{ route('mobil.tampil_hapus') }}">List Mobil Dihapus</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ route('merek.index') }}">Merek</a>
-          <li><a href="{{ route('akun.index') }}">Akun</a>
-        @else
-
-        @endif
+        <li><a href="#">Brand</a>
+          <ul class="sub-menu">
+            @foreach ($merek as $data)
+              <li><a href="{{ route('category', $data->id) }}">{{ $data->name }}</a></li>
+            @endforeach
+          </ul>
+        </li>
+        <li><a href="{{ route('history') }}">History</a>
+        <li><a href="{{ route('favorite') }}">Daftar Suka</a>
       </ul>
     </div>
   </nav>

@@ -2,52 +2,31 @@
 	<section class="footer-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-sm-6">
+				<div class="col-md-4">
 					<div class="footer-widget about-widget">
 						<h2>About</h2>
 						<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
 						<img src="{{ asset('user/img/cards.png') }}" alt="">
 					</div>
 				</div>
-				<div class="col-lg-4 col-sm-6">
+				<div class="col-md-8">
 					<div class="footer-widget about-widget">
-						<h2>Questions</h2>
+						<h2>Brand</h2>
 						<ul>
-							<li><a href="">About Us</a></li>
-							<li><a href="">Track Orders</a></li>
-							<li><a href="">Returns</a></li>
-							<li><a href="">Jobs</a></li>
-							<li><a href="">Shipping</a></li>
-							<li><a href="">Blog</a></li>
+							@php
+								$i = 1;
+							@endphp
+							@foreach ($merek as $data)
+								<li><a href="{{ route('category', $data->id) }}">{{ $data->name }}</a></li>
+							@if ($i % 6 == 0)
+								</ul>
+								<ul>
+							@endif
+							@php
+								$i++;
+							@endphp
+							@endforeach
 						</ul>
-						<ul>
-							<li><a href="">Partners</a></li>
-							<li><a href="">Bloggers</a></li>
-							<li><a href="">Support</a></li>
-							<li><a href="">Terms of Use</a></li>
-							<li><a href="">Press</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-12">
-					<div class="footer-widget contact-widget">
-						<h2>Questions</h2>
-						<div class="con-info">
-							<span>C.</span>
-							<p>www.coding.cox</p>
-						</div>
-						<div class="con-info">
-							<span>B.</span>
-							<p>Jl Anggur No 21A, Keniten, Ponorogo, Ponorgo, Jawa Timur, Indonesia</p>
-						</div>
-						<div class="con-info">
-							<span>T.</span>
-							<p>+62 812 4683 5129</p>
-						</div>
-						<div class="con-info">
-							<span>E.</span>
-							<p>adhiariyadi40@gmail.com</p>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -55,21 +34,15 @@
 		<div class="social-links-warp">
 			<div class="container">
 				<div class="social-links">
-					<a href="https://vk.com/id571671195" class="vk"><i class="fa fa-vk"></i><span>Vk</span></a>
-					<a href="https://t.me/Didotz_AE" class="telegram"><i class="fa fa-telegram"></i><span>Telegram</span></a>
-					<a href="https://www.instagram.com/didotz_poetra_ae/" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-					<a href="https://www.facebook.com/profile.php?id=100007787444809" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-					<a href="https://twitter.com/Didotz9" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-					<a href="https://api.whatsapp.com/send?phone=6281246835129" class="whatsapp"><i class="fa fa-whatsapp"></i><span>whatsapp</span></a>
-					<a href="https://www.youtube.com/channel/UCSU_al9Rti8l4AQtgb4dZlg?view_as=subscriber" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+					<a target="_blank" href="https://www.facebook.com/profile.php?id=100007787444809" class="facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+					<a target="_blank" href="https://t.me/adhiariyadi" class="telegram"><i class="fa fa-telegram"></i><span>Telegram</span></a>
+					<a target="_blank" href="https://www.instagram.com/adhiariyadi_/" class="instagram"><i class="fa fa-instagram"></i><span>Instagram</span></a>
+					<a target="_blank" href="https://github.com/adhiariyadi/" class="github"><i class="fa fa-github"></i><span>github</span></a>
+					<a target="_blank" href="https://twitter.com/adhiariyadi_" class="twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+					<a target="_blank" href="https://api.whatsapp.com/send?phone=6281246835129" class="whatsapp"><i class="fa fa-whatsapp"></i><span>Whatsapp</span></a>
+					<a target="_blank" href="https://www.youtube.com/channel/UCSU_al9Rti8l4AQtgb4dZlg?view_as=subscriber" class="youtube"><i class="fa fa-youtube"></i><span>Youtube</span></a>
 				</div>
-
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				<p class="text-white text-center mt-5">Copyright &copy;<script>
-						document.write(new Date().getFullYear());
-					</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.youtube.com/channel/UCSU_al9Rti8l4AQtgb4dZlg?view_as=subscriber" target="_blank">Didotz Gaming</a></p>
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
+				<p class="text-white text-center mt-5">Copyright &copy; @if(date('Y') == '2019') {{ date('Y') }} @else 2019 - {{ date('Y') }} @endif All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/adhiariyadi/" target="_blank">Adhi Ariyadi</a>.</p>
 			</div>
 		</div>
 	</section>

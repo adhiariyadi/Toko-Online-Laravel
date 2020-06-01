@@ -21,6 +21,8 @@
 	<link rel="stylesheet" href="{{ asset('user/css/animate.css') }}" />
 	<link rel="stylesheet" href="{{ asset('user/css/style.css') }}" />
 
+	@yield('css')
+
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
@@ -32,8 +34,8 @@
 		<div class="loader"></div>
 	</div>
 
-  @include('template_frontend.navbar')
+  	@include('template_frontend.navbar')
 
 	@yield('content')
 
-  @include('template_frontend.footer')
+  	@include('template_frontend.footer')

@@ -137,49 +137,23 @@
                       <input type="text" placeholder="Pekerjaan" autocomplete="off" name="pekerjaan" class="form-control">
                     </div>
                   @endif
-                  <div class="form-group">
-                    <label>Tanggal Lahir</label>
-                    <div class="chosen-select-single mg-b-20">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <select class="select2_demo_3 form-control" name="tanggal">
-                            <option value="" holder>Tanggal</option>
-                            <script>
-                        			for(i = 1; i <= 31; i++){
-                                i = (i < 10) ? "0" + i : i;
-                                var tgl = i
-                        				document.write("<option value=" + i + ">" + i + "</option>");
-                        			}
-                        		</script>
-                          </select>
-                        </div>
-                        <div class="col-md-4">
-                          <select class="select2_demo_3 form-control" name="bulan">
-                            <option value="" holder>Bulan</option>
-                            <script>
-                              var bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                        			for(i = 0; i <= 11; i++){
-                        				document.write("<option value=" + bulan[i] + ">" + bulan[i] + "</option>");
-                        			}
-                        		</script>
-                          </select>
-                        </div>
-                        <div class="col-md-4">
-                          <select class="select2_demo_3 form-control" name="tahun">
-                            <option value="" holder>Tahun</option>
-                            <script>
-                              var date = new Date();
-                              var year = date.getFullYear();
-                        			var tahun = 1900;
-                        			for(i = year+1; i >= tahun; i--){
-                        				document.write("<option value=" + i + ">" + i + "</option>");
-                        			}
-                        		</script>
-                          </select>
-                        </div>
+                  @if ($user->tanggal_lahir)
+                    <div class="form-group data-custon-pick" id="data_3">
+                      <label><h6>Tanggal Lahir</h6></label>
+                      <div class="input-group date">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        <input type="text" name="tgl_lahir" class="form-control" value="{{ date('m/d/Y', strtotime($user->tanggal_lahir)) }}">
                       </div>
                     </div>
-                  </div>
+                  @else
+                    <div class="form-group data-custon-pick" id="data_3">
+                      <label><h6>Tanggal Lahir</h6></label>
+                      <div class="input-group date">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        <input type="text" name="tgl_lahir" class="form-control" value="22/11/2000">
+                      </div>
+                    </div>
+                  @endif
                   <div class="form-group">
                     <div class="row">
         							<div class="col-md-12">

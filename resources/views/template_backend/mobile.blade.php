@@ -9,10 +9,8 @@
               <li class="nav-item"><a href="/" class="nav-link dropdown-toggle">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a></li>
               <li><a data-toggle="collapse" data-target="#demo" href="#">Order <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                 <ul id="demo" class="collapse dropdown-header-top">
-                  <li><a href="{{ route('order.index') }}">List Order Belum Dibayar</a></li>
-                  <li><a href="{{ route('order.tampil_pending') }}">List Order Dipending</a></li>
-                  <li><a href="{{ route('order.tampil_bayar') }}">List Order Sudah Dibayar</a></li>
-                  <li><a href="{{ route('order.tampil_cancel') }}">List Order Dicancel</a></li>
+                  <li><a href="{{ route('order.index') }}">List Order</a></li>
+                  <li><a href="{{ route('order.tampil_cancel') }}">List Batal Order</a></li>
                 </ul>
               </li>
               <li><a data-toggle="collapse" data-target="#demo" href="#">Mobil <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>

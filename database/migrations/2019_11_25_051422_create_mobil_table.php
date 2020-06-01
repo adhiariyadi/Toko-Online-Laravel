@@ -19,7 +19,6 @@ class CreateMobilTable extends Migration
             $table->string('type');
             $table->integer('price');
             $table->string('gambar');
-            $table->integer('stock');
             $table->timestamps();
         });
     }

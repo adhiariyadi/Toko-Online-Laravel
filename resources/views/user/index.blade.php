@@ -25,53 +25,25 @@
   	</section>
   	<!-- Hero section end -->
 
-  	<!-- Features section -->
-  	<section class="features-section">
-  		<div class="container-fluid">
-  			<div class="row">
-  				<div class="col-sm-4 p-0 feature">
-  					<div class="feature-inner">
-  						<div class="feature-icon">
-  							<img src="user/img/icons/1.png" alt="#">
-  						</div>
-  						<h2>Fast Secure Payments</h2>
-  					</div>
-  				</div>
-  				<div class="col-sm-4 p-0 feature">
-  					<div class="feature-inner">
-  						<div class="feature-icon">
-  							<img src="user/img/icons/2.png" alt="#">
-  						</div>
-  						<h2>Premium Products</h2>
-  					</div>
-  				</div>
-  				<div class="col-sm-4 p-0 feature">
-  					<div class="feature-inner">
-  						<div class="feature-icon">
-  							<img src="user/img/icons/3.png" alt="#">
-  						</div>
-  						<h2>Free & fast Delivery</h2>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
-  	</section>
-  	<!-- Features section end -->
-
   	<!-- letest product section -->
   	<section class="top-letest-product-section">
   		<div class="container">
   			<div class="section-title">
   				<h2>LATEST PRODUCTS</h2>
   			</div>
+			<?php $no=0; ?>
   			<div class="product-slider owl-carousel">
-          @foreach ($mobil as $val)
+          		@foreach ($car as $val)
     				<div class="product-item">
     					<div class="pi-pic">
-                <a href="{{ route('mobil.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
+							@if ($no == 0)
+								<div class="tag-new">New</div>
+							@else
+							@endif
+                			<a href="{{ route('mobil.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
     						<div class="pi-links">
     							<a href="{{ url('add-to-cart/'.$val->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-    							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+								<a href="{{ url('like/'.$val->id) }}" class="wishlist-btn"><i class="fa fa-heart-o"></i></a>
     						</div>
     					</div>
     					<div class="pi-text">
@@ -79,13 +51,12 @@
     						<p><a href="{{ route('mobil.show', $val->id) }}">{{ $val->merek->name }} {{$val->type}}</a></p>
     					</div>
     				</div>
-          @endforeach
+					<?php $no++ ?>
+          		@endforeach
   			</div>
   		</div>
   	</section>
   	<!-- letest product section end -->
-
-
 
   	<!-- Product filter section -->
   	<section class="product-filter-section">
@@ -93,24 +64,34 @@
   			<div class="section-title">
   				<h2>BROWSE TOP SELLING PRODUCTS</h2>
   			</div>
+			<?php $no=0; ?>
   			<div class="row">
-          @foreach ($mobil as $val)
+          		@foreach ($mobil as $val)
     				<div class="col-lg-3 col-sm-6">
     					<div class="product-item">
     						<div class="pi-pic">
-                  <a href="{{ route('mobil.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
+								@if ($no == 0)
+								  <div class="tag-new">New</div>
+								@else
+								@endif
+                  				<a href="{{ route('mobil.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
     							<div class="pi-links">
-    								<a href="{{ url('add-to-cart/'.$val->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-    								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+									<a href="{{ url('add-to-cart/'.$val->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+									@if ($val->like($val->id))
+										<a href="{{ url('unlike/'.$val->id) }}" class="wishlist-btn"><i class="fa fa-heart"></i></a>
+									@else
+										<a href="{{ url('like/'.$val->id) }}" class="wishlist-btn"><i class="fa fa-heart-o"></i></a>
+									@endif
     							</div>
     						</div>
     						<div class="pi-text">
-                  <h6><a href="{{ route('mobil.show', $val->id) }}">$ {{ number_format($val->price, 0) }}</a></h6>
-      						<p><a href="{{ route('mobil.show', $val->id) }}">{{ $val->merek->name }} {{$val->type}}</a></p>
+                  				<h6><a href="{{ route('mobil.show', $val->id) }}">$ {{ number_format($val->price, 0) }}</a></h6>
+      							<p><a href="{{ route('mobil.show', $val->id) }}">{{ $val->merek->name }} {{$val->type}}</a></p>
     						</div>
     					</div>
     				</div>
-          @endforeach
+					<?php $no++ ?>
+          		@endforeach
   			</div>
   		</div>
   	</section>

@@ -91,9 +91,9 @@
       <![endif]-->
 
 	<!-- Page Preloder -->
-	<div id="preloder">
+	{{-- <div id="preloder">
 		<div class="loader"></div>
-	</div>
+	</div> --}}
 
   <!-- Header top area start-->
   <div class="wrapper-pro">
@@ -136,11 +136,7 @@
           <div class="welcome-adminpro-area">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="welcome-wrapper shadow-reset res-mg-t mg-b-30">
-                    @yield('content')
-                  </div>
-                </div>
+                @yield('content')
               </div>
             </div>
           </div>

@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use App\User;
+use App\Merek;
 use App\Order;
+use App\Bukti;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class OrderController extends Controller
 {
@@ -14,7 +19,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $order = Order::where('payment_status', 'Belum Dibayar')->orderBy('created_at','DESC')->paginate(10);
+        $order = Order::orderBy('created_at', 'DESC')->paginate(10);
         return view('admin.order.index', compact('order'));
     }
 
@@ -47,7 +52,9 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $order = Order::findorfail($id);
+        $user = User::findorfail($order->user_id);
+        return view('admin.order.show', compact('order', 'user'));
     }
 
     /**
@@ -73,12 +80,12 @@ class OrderController extends Controller
         $order = Order::findorfail($id);
 
         $order_data = [
-          'payment_status' => 'Sudah Dibayar',
+            'payment_status' => 'Sudah Dibayar',
         ];
 
         $order->update($order_data);
 
-        return redirect()->back()->with('success', 'Order Berhasil Dikonfirmasi');
+        return redirect()->route('order.index')->with('success', 'Order Berhasil Dikonfirmasi');
     }
 
     /**
@@ -92,7 +99,7 @@ class OrderController extends Controller
         $order = Order::findorfail($id);
 
         $order_data = [
-          'payment_status' => 'Dicancel',
+            'payment_status' => 'Dicancel',
         ];
 
         $order->update($order_data);
@@ -105,32 +112,53 @@ class OrderController extends Controller
 
     public function tampil_cancel()
     {
-      $order = Order::orderBy('created_at','DESC')->onlyTrashed()->paginate(10);
-      return view('admin.order.tampil_cancel', compact('order'));
+        $order = Order::orderBy('created_at', 'DESC')->onlyTrashed()->paginate(10);
+        return view('admin.order.tampil_cancel', compact('order'));
     }
 
-    public function tampil_bayar()
+    public function history()
     {
-        $order = Order::where('payment_status', 'Sudah Dibayar')->orderBy('created_at','DESC')->paginate(10);
-        return view('admin.order.tampil_bayar', compact('order'));
+        $user = User::findorfail(Auth::user()->id);
+        $order = Order::orderBy('created_at', 'DESC')->where('user_id', $user->id)->paginate(10);
+        $merek = Merek::all();
+
+        return view('user.history', compact('order', 'merek'));
     }
 
-    public function tampil_pending()
+    public function pembayaran($id)
     {
-        $order = Order::where('payment_status', 'Dipending')->orderBy('created_at','DESC')->paginate(10);
-        return view('admin.order.tampil_pending', compact('order'));
+        $order = Order::findorfail($id);
+        $merek = Merek::all();
+
+        return view('user.pembayaran', compact('order', 'merek'));
     }
 
-    public function bayar($id)
+    public function proses_pembayaran(Request $request, $id)
     {
         $order = Order::findorfail($id);
 
         $order_data = [
-          'payment_status' => 'Dipending',
+            'payment_status' => 'Dipending',
         ];
 
         $order->update($order_data);
+        $gambar = $request->gambar;
+        $foto = date('Ymdhis') . "_" . $gambar->getClientOriginalName();
+        Bukti::create([
+            'order_id' => $id,
+            'foto' => 'uploads/bukti/' . $foto,
+            'nama_bank' => $request->namaBank,
+            'nama_pengirim' => $request->namaPengirim,
+        ]);
+        $gambar->move('uploads/bukti/', $foto);
 
-        return redirect()->back()->with('success', 'Pembayaran Berhasil Mohon Tunggu Konfirmasi Dari Admin');
+        return redirect()->route('pembayaran.success')->with('success', 'Pembelian Berhasil Silahkan Melakukan Pembayaran Melalui Payment Yang Anda Pilih');
+    }
+
+    public function success()
+    {
+        $merek = Merek::all();
+
+        return view('user.success', compact('merek'));
     }
 }

@@ -53,24 +53,24 @@
                   @endif
 									<ul class="list basic_info">
                     @if($user->tanggal_lahir)
-										  <li><i class="lnr lnr-calendar-full"></i><a href="#">{{ $user->tanggal_lahir }}</a></li>
+										  <li><a href="#"><i class="lnr lnr-calendar-full"></i>{{ date('l, d F Y', strtotime($user->tanggal_lahir)) }}</a></li>
                     @else
-										  <li><i class="lnr lnr-calendar-full"></i><a href="#"> 31 December 1992</a></li>
+										  <li><a href="#"><i class="lnr lnr-calendar-full"></i>Saturday, 26 October 2002</a></li>
                     @endif
                     @if($user->telepon)
-										  <li><i class="lnr lnr-phone-handset"></i><a href="#">{{ $user->telepon }}</a></li>
+										  <li><a href="#"><i class="lnr lnr-phone-handset"></i>{{ $user->telepon }}</a></li>
                     @else
-										  <li><i class="lnr lnr-phone-handset"></i><a href="#"> 44 (012) 6954 783</a></li>
+										  <li><a href="#"><i class="lnr lnr-phone-handset"></i>+62 812 4683 5129</a></li>
                     @endif
                     @if($user->email)
-										  <li><i class="lnr lnr-envelope"></i><a href="#">{{ $user->email }}</a></li>
+										  <li><a href="#"><i class="lnr lnr-envelope"></i>{{ $user->email }}</a></li>
                     @else
-										  <li><i class="lnr lnr-envelope"></i><a href="#"> businessplan@donald</a></li>
+										  <li><a href="#"><i class="lnr lnr-envelope"></i>adhiariyadi40@gmail.com</a></li>
                     @endif
                     @if($user->address && $user->kelurahan && $user->kecamatan && $user->kabupaten && $user->provinsi)
-										  <li><i class="lnr lnr-home"></i><a href="#">{{ $user->address }}, {{ $user->kelurahan }}, {{ $user->kecamatan }}, {{ $user->kabupaten }}, {{ $user->provinsi }}</a></li>
+										  <li><a href="#"><i class="lnr lnr-home"></i>{{ $user->address }}, {{ $user->kelurahan }}, {{ $user->kecamatan }}, {{ $user->kabupaten }}, {{ $user->provinsi }}</a></li>
                     @else
-										  <li><i class="lnr lnr-home"></i><a href="#"> Santa monica bullevard</a></li>
+										  <li><a href="#"><i class="lnr lnr-home"></i>Ponorogo, Jawa Timur</a></li>
                     @endif
 									</ul>
 								</div><br><br>

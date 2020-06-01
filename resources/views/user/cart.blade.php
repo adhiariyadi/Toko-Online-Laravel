@@ -6,7 +6,7 @@
       <h4>Cart</h4>
       <div class="site-pagination">
         <a href="{{ route('home') }}">Home</a> /
-        <a href="{{ route('cart') }}">Cart</a>
+        <a href="#">Cart</a>
       </div>
     </div>
   </div>
@@ -86,4 +86,39 @@
       </div>
     </div>
   </section>
+  
+	<!-- Related product section -->
+	<section class="related-product-section">
+		<div class="container">
+			<div class="section-title text-uppercase">
+				<h2>Continue Shopping</h2>
+      </div>
+      <?php $no=0; ?>
+			<div class="row">
+        @foreach ($produk as $data)
+          <div class="col-lg-3 col-sm-6">
+            <div class="product-item">
+              <div class="pi-pic">
+                @if ($no == 0)
+                  <div class="tag-new">New</div>
+                @else
+                @endif
+                <img src="{{ asset( $data->gambar ) }}" alt="">
+                <div class="pi-links">
+                  <a href="{{ url('add-to-cart/'.$data->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                  <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                </div>
+              </div>
+              <div class="pi-text">
+                <h6>$ {{ number_format($data->price, 0) }}</h6>
+                <p>{{ $data->merek->name }} {{$data->type}}</p>
+              </div>
+            </div>
+          </div>
+          <?php $no++ ?>
+        @endforeach
+			</div>
+		</div>
+	</section>
+	<!-- Related product section end -->
 @endsection

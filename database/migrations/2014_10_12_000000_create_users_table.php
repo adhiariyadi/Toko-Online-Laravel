@@ -14,25 +14,23 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-          $table->bigIncrements('id');
-          $table->string('name');
-          $table->enum('role', ['admin', 'user']);
-          $table->string('email')->unique();
-          $table->timestamp('email_verified_at')->nullable();
-          $table->string('pekerjaan');
-          $table->integer('tanggal');
-          $table->string('bulan');
-          $table->integer('tahun');
-          $table->string('telepon');
-          $table->string('address');
-          $table->string('kelurahan');
-          $table->string('kecamatan');
-          $table->string('kabupaten');
-          $table->string('provinsi');
-          $table->string('gambar');
-          $table->string('password');
-          $table->rememberToken();
-          $table->timestamps();
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->enum('role', ['admin', 'user']);
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('pekerjaan');
+            $table->date('tanggal_lahir');
+            $table->string('telepon');
+            $table->string('address');
+            $table->string('kelurahan');
+            $table->string('kecamatan');
+            $table->string('kabupaten');
+            $table->string('provinsi');
+            $table->string('gambar');
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
