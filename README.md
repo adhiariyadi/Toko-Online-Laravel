@@ -25,8 +25,8 @@ Web Toko Online yang dibuat oleh <a href="https://github.com/adhiariyadi"> Adhi 
 1. **Clone Repository**
 
 ```bash
-git clone https://github.com/adhiariyadi/Blog-SEO-Laravel.git
-cd Blog-SEO-Laravel
+git clone https://github.com/adhiariyadi/Toko-Online-Laravel.git
+cd Toko-Online-Laravel
 composer install
 copy .env.example .env
 ```
