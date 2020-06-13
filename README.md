@@ -4,9 +4,10 @@
 
 Web Toko Online yang dibuat oleh <a href="https://github.com/adhiariyadi"> Adhi Ariyadi </a>. **Toko Online adalah Website penjualan secara online untuk seseorang yang inggin membeli suatu produk melalui website dengan mudah.**
 
-## Fitur apa saja yang tersedia di Staycation?
+## Fitur apa saja yang tersedia di Toko Online?
 
 - Autentikasi Admin
+- User & CRUD
 - Merek & CRUD
 - Mobil & CRUD
 - Order & CRUD
