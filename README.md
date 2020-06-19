@@ -6,12 +6,12 @@ Web Toko Online yang dibuat oleh <a href="https://github.com/adhiariyadi"> Adhi 
 
 ## Fitur apa saja yang tersedia di Toko Online?
 
-- Autentikasi Admin
-- User & CRUD
-- Merek & CRUD
-- Mobil & CRUD
-- Order & CRUD
-- Dan lain-lain
+-   Autentikasi Admin
+-   User & CRUD
+-   Merek & CRUD
+-   Mobil & CRUD
+-   Order & CRUD
+-   Dan lain-lain
 
 ## Release Date
 
@@ -29,7 +29,7 @@ Web Toko Online yang dibuat oleh <a href="https://github.com/adhiariyadi"> Adhi 
 git clone https://github.com/adhiariyadi/Toko-Online-Laravel.git
 cd Toko-Online-Laravel
 composer install
-copy .env.example .env
+cp .env.example .env
 ```
 
 2. **Buka `.env` lalu ubah baris berikut sesuai dengan databasemu yang ingin dipakai**
@@ -45,9 +45,7 @@ DB_PASSWORD=
 
 ```bash
 php artisan key:generate
-php artisan migrate
-php artisan db:seed
-php artisan storage:link
+php artisan migrate --seed
 ```
 
 4. **Jalankan website**
@@ -58,8 +56,8 @@ php artisan serve
 
 ## Author
 
-- Facebook : <a href="https://web.facebook.com/profile.php?id=100007787444809"> Adhi Ariyadi</a>
-- LinkedIn : <a href="https://www.linkedin.com/in/adhi-ariyadi-62164a1a0/"> Adhi Ariyadi</a>
+-   Facebook : <a href="https://web.facebook.com/profile.php?id=100007787444809"> Adhi Ariyadi</a>
+-   LinkedIn : <a href="https://www.linkedin.com/in/adhi-ariyadi-62164a1a0/"> Adhi Ariyadi</a>
 
 ## Contributing
 
@@ -68,5 +66,5 @@ Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Ber
 
 ## License
 
-- Copyright © 2020 Adhi Ariyadi.
-- **Toko Online is open-sourced software licensed under the MIT license.**
+-   Copyright © 2020 Adhi Ariyadi.
+-   **Toko Online is open-sourced software licensed under the MIT license.**
