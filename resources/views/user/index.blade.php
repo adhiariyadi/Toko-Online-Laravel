@@ -43,7 +43,11 @@
                 			<a href="{{ route('mobil.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
     						<div class="pi-links">
     							<a href="{{ url('add-to-cart/'.$val->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="{{ url('like/'.$val->id) }}" class="wishlist-btn"><i class="fa fa-heart-o"></i></a>
+								@if ($val->like($val->id))
+									<a href="{{ url('unlike/'.$val->id) }}" class="wishlist-btn"><i class="fa fa-heart"></i></a>
+								@else
+									<a href="{{ url('like/'.$val->id) }}" class="wishlist-btn"><i class="fa fa-heart-o"></i></a>
+								@endif
     						</div>
     					</div>
     					<div class="pi-text">
