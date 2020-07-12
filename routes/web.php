@@ -19,12 +19,26 @@ Route::get('/clear-cache', function () {
   Artisan::call('config:clear');
   Artisan::call('cache:clear');
   Artisan::call('config:cache');
-  return 'DONE'; //Return anything
+  return 'DONE';
 });
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
+  Route::middleware(['role'])->group(function () {
+    Route::resource('/merek', 'MerekController');
+    Route::resource('/order', 'OrderController');
+    Route::get('/order/tampil_cancel', 'OrderController@tampil_cancel')->name('order.tampil_cancel');
+    Route::get('/order/tampil_bayar', 'OrderController@tampil_bayar')->name('order.tampil_bayar');
+    Route::get('/order/tampil_pending', 'OrderController@tampil_pending')->name('order.tampil_pending');
+    Route::resource('/akun', 'AkunController');
+    Route::resource('/mobil', 'MobilController');
+    Route::get('/create/mobil', 'MobilController@create')->name('create.mobil');
+    Route::get('/mobil/tampil_hapus', 'MobilController@tampil_hapus')->name('mobil.tampil_hapus');
+    Route::get('/mobil/restore/{id}', 'MobilController@restore')->name('mobil.restore');
+    Route::delete('/mobil/kill/{id}', 'MobilController@kill')->name('mobil.kill');
+  });
+
   Route::get('/', 'MobilController@home')->name('home');
   Route::get('/home', 'MobilController@home')->name('home');
   Route::get('/favorite', 'MobilController@favorite')->name('favorite');
@@ -46,17 +60,4 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/pembayaran/{id}', 'OrderController@pembayaran')->name('pembayaran');
   Route::patch('/proses_pembayaran/{id}', 'OrderController@proses_pembayaran')->name('proses_pembayaran');
   Route::post('/proses_cekout/{id}', 'MobilController@proses_cekout')->name('proses_cekout');
-
-  Route::middleware(['role'])->group(function () {
-    Route::resource('/merek', 'MerekController');
-    Route::get('/order/tampil_cancel', 'OrderController@tampil_cancel')->name('order.tampil_cancel');
-    Route::get('/order/tampil_bayar', 'OrderController@tampil_bayar')->name('order.tampil_bayar');
-    Route::get('/order/tampil_pending', 'OrderController@tampil_pending')->name('order.tampil_pending');
-    Route::resource('/order', 'OrderController');
-    Route::resource('/akun', 'AkunController');
-    Route::get('/mobil/tampil_hapus', 'MobilController@tampil_hapus')->name('mobil.tampil_hapus');
-    Route::get('/mobil/restore/{id}', 'MobilController@restore')->name('mobil.restore');
-    Route::delete('/mobil/kill/{id}', 'MobilController@kill')->name('mobil.kill');
-    Route::resource('/mobil', 'MobilController');
-  });
 });

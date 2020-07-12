@@ -49,7 +49,7 @@ class AkunController extends Controller
       $gambar = $request->gambar;
       $new_gambar = time() . "_" . $gambar->getClientOriginalName();
       $gambar->move('uploads/akun/', $new_gambar);
-      $user = User::create([
+      User::create([
         'name' => $request->name,
         'role' => $request->role,
         'gambar' => 'uploads/akun/' . $new_gambar,
@@ -57,7 +57,7 @@ class AkunController extends Controller
         'password' => Hash::make($request->password),
       ]);
     } else {
-      $user = User::create([
+      User::create([
         'name' => $request->name,
         'role' => $request->role,
         'email' => $request->email,
@@ -111,16 +111,18 @@ class AkunController extends Controller
       'kabupaten' => 'required',
       'kecamatan' => 'required',
       'provinsi' => 'required',
-      'kode_pos' => 'required',
       'telepon' => 'required',
     ]);
+    if ($request->tgl_lahir) {
+      $request->tgl_lahir = date('Y-m-d', strtotime($request->tgl_lahir));
+    }
 
     $user = User::findorfail($id);
 
     if ($request->gambar == true) {
       $gambar = $request->gambar;
       $new_gambar = time() . "_" . $gambar->getClientOriginalName();
-      $gambar->move('uploads/mobil/', $new_gambar);
+      $gambar->move('uploads/akun/', $new_gambar);
 
       if ($request->gambar && $request->pekerjaan == true) {
 
@@ -367,8 +369,6 @@ class AkunController extends Controller
       ];
     }
 
-    // dd($user_data);
-
     $user->update($user_data);
 
     return redirect()->back()->with('success', 'User Berhasil Diupdate');
@@ -410,7 +410,6 @@ class AkunController extends Controller
       'kabupaten' => 'required',
       'kecamatan' => 'required',
       'provinsi' => 'required',
-      'kode_pos' => 'required',
       'telepon' => 'required',
     ]);
     if ($request->tgl_lahir) {
@@ -422,7 +421,7 @@ class AkunController extends Controller
     if ($request->gambar == true) {
       $gambar = $request->gambar;
       $new_gambar = time() . "_" . $gambar->getClientOriginalName();
-      $gambar->move('uploads/mobil/', $new_gambar);
+      $gambar->move('uploads/akun/', $new_gambar);
 
       if ($request->gambar && $request->pekerjaan == true) {
 

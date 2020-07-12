@@ -51,7 +51,7 @@
             <label><h6>Tanggal Lahir</h6></label>
             <div class="input-group date">
               <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-              <input type="text" name="tgl_lahir" class="form-control" value="{{ $user->tanggal_lahir }}">
+              <input type="text" name="tgl_lahir" class="form-control" value="{{ date('m/d/Y', strtotime($user->tanggal_lahir)) }}">
             </div>
           </div>
         @else
@@ -101,17 +101,6 @@
                   <input type="text" class="form-control" name="kabupaten" placeholder="Kabupaten">
                 </div>
               @endif
-              @if($user->kode_pos)
-                <div class="form-group">
-                  <label>Kode Pos</label>
-                  <input type="text" class="form-control" name="kode_pos" value="{{ $user->kode_pos }}">
-                </div>
-              @else
-                <div class="form-group">
-                  <label>Kode Pos</label>
-                  <input type="text" class="form-control" name="kode_pos" placeholder="Kode Pos">
-                </div>
-              @endif
             </div>
             <div class="col-md-6">
               @if($user->kecamatan)
@@ -136,20 +125,20 @@
                   <input type="text" class="form-control" name="provinsi" placeholder="Provinsi">
                 </div>
               @endif
-              @if($user->telepon)
-                <div class="form-group">
-                  <label>Nomor Telepon</label>
-                  <input type="text" class="form-control" name="telepon" value="{{ $user->telepon }}">
-                </div>
-              @else
-                <div class="form-group">
-                  <label>Nomor Telepon</label>
-                  <input type="text" class="form-control" name="telepon" placeholder="+62 8xx xxxx xxxx">
-                </div>
-              @endif
             </div>
           </div>
         </div>
+        @if($user->telepon)
+          <div class="form-group">
+            <label>Nomor Telepon</label>
+            <input type="text" class="form-control" name="telepon" value="{{ $user->telepon }}">
+          </div>
+        @else
+          <div class="form-group">
+            <label>Nomor Telepon</label>
+            <input type="text" class="form-control" name="telepon" placeholder="+62 8xx xxxx xxxx">
+          </div>
+        @endif
         <div class="form-group">
           <label>Password</label>
           <input class="form-control" placeholder="Password" type="password" name="password" autocomplete="off">

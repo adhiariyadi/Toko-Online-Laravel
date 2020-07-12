@@ -15,16 +15,6 @@ use Session;
 class MobilController extends Controller
 {
   /**
-   * Create a new controller instance.
-   *
-   * @return void
-   */
-  public function __construct()
-  {
-    $this->middleware(['auth', 'verified']);
-  }
-
-  /**
    * Display a listing of the resource.
    *
    * @return \Illuminate\Http\Response
@@ -153,6 +143,13 @@ class MobilController extends Controller
     $mobil->delete();
 
     return redirect()->back()->with('success', 'Postingan Anda Berhasil Dihapus (Silahkan cek trashed mobil)');
+  }
+
+  public function new()
+  {
+    $mobil = Mobil::paginate(10);
+    $merek = Merek::all();
+    return view('admin.mobil.index', compact('mobil', 'merek'));
   }
 
   public function tampil_hapus()

@@ -9,13 +9,13 @@
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="welcome-wrapper shadow-reset res-mg-t mg-b-30">
-      <a href="{{ route('mobil.create') }}" class="btn btn-primary btn-sm">Tambah Post</a><br><br>
+      <a href="{{ route('create.mobil') }}" class="btn btn-primary btn-sm">Tambah Mobil</a><br><br>
       <table class="table table-striped table-hover table-sm table-bordered">
         <tr>
           <th>No</th>
-          <th>Nama Post</th>
-          <th>Kategori</th>
-          <th>Daftar Tags</th>
+          <th>Merek Mobil</th>
+          <th>Type Mobil</th>
+          <th>price</th>
           <th>Thumbnail</th>
           <th>Action</th>
         </tr>
@@ -29,7 +29,7 @@
               <img src="{{ asset( $d->gambar ) }}" class="img-fluid" width="100" alt="">
             </td>
             <td>
-              <form action="{{ route('mobil.destroy', $d->id) }}" method="post">
+              <form action="{{ route('mobil.destroy', $d->id) }}" method="Mobil">
                 @csrf
                 @method('delete')
                 <a href="{{ route('mobil.edit', $d->id) }}" class="btn btn-success btn-sm">Edit</a>
