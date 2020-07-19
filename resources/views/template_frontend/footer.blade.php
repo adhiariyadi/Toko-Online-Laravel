@@ -34,7 +34,7 @@
 		<div class="social-links-warp">
 			<div class="container">
 				<div class="social-links">
-					<a target="_blank" href="https://www.facebook.com/profile.php?id=100007787444809" class="facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+					<a target="_blank" href="https://www.facebook.com/adhiariyadi.me/" class="facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
 					<a target="_blank" href="https://t.me/adhiariyadi" class="telegram"><i class="fa fa-telegram"></i><span>Telegram</span></a>
 					<a target="_blank" href="https://www.instagram.com/adhiariyadi_/" class="instagram"><i class="fa fa-instagram"></i><span>Instagram</span></a>
 					<a target="_blank" href="https://github.com/adhiariyadi/" class="github"><i class="fa fa-github"></i><span>github</span></a>
