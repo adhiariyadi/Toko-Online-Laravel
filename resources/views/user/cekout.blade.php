@@ -28,11 +28,17 @@
 								@else
 									<input type="text" name="name" placeholder="Nama">
 								@endif
+								@error('name')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
 								@if(Auth::user()->address)
 									<input type="text" name="address" value="{{ Auth::user()->address }}">
 								@else
 									<input type="text" name="address" placeholder="Alamat">
 								@endif
+								@error('address')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
 							</div>
 							<div class="col-md-6">
 								@if(Auth::user()->kelurahan)
@@ -40,11 +46,17 @@
 								@else
 									<input type="text" name="kelurahan" placeholder="Kelurahan">
 								@endif
+								@error('kelurahan')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
 								@if(Auth::user()->kabupaten)
 									<input type="text" name="kabupaten" value="{{ Auth::user()->kabupaten }}">
 								@else
 									<input type="text" name="kabupaten" placeholder="Kabupaten">
 								@endif
+								@error('kabupaten')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
 							</div>
 							<div class="col-md-6">
 								@if(Auth::user()->kecamatan)
@@ -52,11 +64,17 @@
 								@else
 									<input type="text" name="kecamatan" placeholder="Kecamatan">
 								@endif
+								@error('kecamatan')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
 								@if(Auth::user()->provinsi)
 									<input type="text" name="provinsi" value="{{ Auth::user()->provinsi }}">
 								@else
 									<input type="text" name="provinsi" placeholder="Provinsi">
 								@endif
+								@error('provinsi')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
 							</div>
 							<div class="col-md-12">
 								@if(Auth::user()->email)
@@ -64,6 +82,9 @@
 								@else
 									<input type="text" name="email" placeholder="Email">
 								@endif
+								@error('email')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
 							</div>
 							<div class="col-md-6">
 								@if(Auth::user()->kode_pos)
@@ -71,6 +92,9 @@
 								@else
 								<input type="text" name="kode_pos" placeholder="Kode Pos">
 								@endif
+								@error('kode_pos')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
 							</div>
 							<div class="col-md-6">
 								@if(Auth::user()->telepon)
@@ -78,6 +102,9 @@
 								@else
 								<input type="text" name="telepon" placeholder="Nomor Telepon">
 								@endif
+								@error('telepon')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
 							</div>
 						</div>
 						<button class="site-btn submit-order-btn">Place Order</button>

@@ -135,6 +135,11 @@ class OrderController extends Controller
 
     public function proses_pembayaran(Request $request, $id)
     {
+        $this->validate($request, [
+            'nama_bank' => 'required',
+            'nama_pengirim' => 'required',
+          ]);
+
         $order = Order::findorfail($id);
 
         $order_data = [
@@ -147,8 +152,8 @@ class OrderController extends Controller
         Bukti::create([
             'order_id' => $id,
             'foto' => 'uploads/bukti/' . $foto,
-            'nama_bank' => $request->namaBank,
-            'nama_pengirim' => $request->namaPengirim,
+            'nama_bank' => $request->nama_bank,
+            'nama_pengirim' => $request->nama_pengirim,
         ]);
         $gambar->move('uploads/bukti/', $foto);
 

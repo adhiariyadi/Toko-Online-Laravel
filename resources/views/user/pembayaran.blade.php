@@ -28,11 +28,17 @@
 							<div class="col-md-11">
                 <div class="form-group">
                   <label>Nama Bank</label>
-                  <input type="text" name="namaBank" placeholder="Nama Bank" autocomplete="off">
+                  <input type="text" name="nama_bank" placeholder="Nama Bank" autocomplete="off">
+                @error('nama_bank')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
                 </div>
                 <div class="form-group">
                   <label>Nama Pengirim</label>
-                  <input type="text" name="namaPengirim" placeholder="Nama Pengirim" autocomplete="off">
+                  <input type="text" name="nama_pengirim" placeholder="Nama Pengirim" autocomplete="off">
+                @error('nama_pengirim')
+								 	<div class="alert alert-danger">{{ $message }}</div>
+								@enderror
                 </div>
                 <div class="form-group">
                   <label>Bukti Transfer Pembayaran</label><br>
