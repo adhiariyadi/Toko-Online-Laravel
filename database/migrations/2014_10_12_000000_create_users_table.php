@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('kecamatan')->nullable();
             $table->string('kabupaten')->nullable();
             $table->string('provinsi')->nullable();
+            $table->string('kode_pos')->nullable();
             $table->string('gambar')->nullable();
             $table->string('password');
             $table->rememberToken();

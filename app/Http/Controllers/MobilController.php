@@ -264,6 +264,18 @@ class MobilController extends Controller
 
   public function proses_cekout(Request $request, $id)
   {
+    $this->validate($request, [
+      'name' => 'required',
+      'address' => 'required',
+      'kelurahan' => 'required',
+      'kabupaten' => 'required',
+      'kecamatan' => 'required',
+      'provinsi' => 'required',
+      'email' => 'required',
+      'kode_pos' => 'required|max:5',
+      'telepon' => 'required|min:10|max:13',
+    ]);
+
     $user = User::findorfail($id);
 
     $user_data = [
